@@ -11,8 +11,8 @@ public class SolutionPb1()
         return true;
     }
 
-    public bool checkIfPowerBitMaskForPowerOfTwo(int number)
+    public bool checkBitMaskForPowerOfTwo(int number)
     {
-        return true;
+        return number > 0 && (number & (number - 1) == 0);
     }
 }
