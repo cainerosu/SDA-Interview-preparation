@@ -1,1 +1,0 @@
-# SDA-Interview-preparation
