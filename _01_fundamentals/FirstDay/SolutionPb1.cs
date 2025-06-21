@@ -13,6 +13,33 @@ public class SolutionPb1()
 
     public bool checkBitMaskForPowerOfTwo(int number)
     {
-        return number > 0 && (number & (number - 1) == 0);
+        return true;
+        //return number > 0 && (number & (number - 1) == 0);
+    }
+
+    public int numberOfOnes(int number)
+    {
+        int counter = 0;
+
+        while (number > 0)
+        {
+            if ((number & 1) == 1) counter++;
+            number /= 2;
+        }
+
+        return counter;
+    }
+
+    public int numberOfOnesOpt(int number)
+    {
+        int count = 0;
+
+        while (number > 0)
+        {
+            number = number & (number - 1);
+            count++;
+        }
+
+        return count;
     }
 }
